@@ -18,7 +18,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.11.0-213.1.beta <3.0.0"
 
 dependencies:
   flutter:
@@ -54,6 +54,10 @@ flutter:
      - web/assets/images/logo_full.png
      - web/assets/images/lightning.png
      - web/assets/images/footer.png
+     - web/assets/images/white_lightning.png
+     - web/assets/images/gradient_lightning.png
+     - web/assets/images/white_e.png
+     - web/assets/images/white_e_without_lightning.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -66,13 +70,14 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: JosefinSans
-  #     fonts:
-  #       - asset: web/assets/fonts/JosefinSans-Bold.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
+  fonts:
+     - family: nevis
+       fonts:
+         - asset: web/assets/fonts/nevis.ttf
+           weight: 700
+     - family: CustomIcons
+       fonts:
+         - asset: web/assets/fonts/CustomIcons.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf

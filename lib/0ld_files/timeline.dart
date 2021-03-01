@@ -13,7 +13,7 @@ class _TimeLineState extends State<TimeLine> {
   bool show = false;
 
   double division = 0;
-  double containerWidth = size.height * 0.01;
+  double containerWidth = fixedSize.height * 0.01;
   int i = 7;
 
   void initState() {
