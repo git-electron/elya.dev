@@ -121,7 +121,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
             : tablet
                 ? 0.18
                 : 0.12;
-        moonX = mobile ? 1.3 : 1.2;
+        moonX = mobile ? 1.4 : 1.2;
       });
     });
 
@@ -249,7 +249,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
               : 1.45;
           moonX = dayNight
               ? mobile
-                  ? 1.3
+                  ? 1.4
                   : 1.2
               : mobile
                   ? 0.9
@@ -325,7 +325,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           animate();
 
                           Future.delayed(
-                              Duration(milliseconds: dayNight ? 650 : 1350),
+                              Duration(milliseconds: mobile ? dayNight ? 1000 : 1000 : dayNight ? 650 : 1350),
                               () {
                             setState(() {
                               dayNightWidgets = !dayNightWidgets;
@@ -391,7 +391,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           animate();
 
                           Future.delayed(
-                              Duration(milliseconds: dayNight ? 650 : 1350),
+                              Duration(milliseconds: mobile ? dayNight ? 1000 : 1000 : dayNight ? 650 : 1350),
                               () {
                             setState(() {
                               dayNightWidgets = !dayNightWidgets;
@@ -423,7 +423,7 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           width: size1.width,
                           alignment: FractionalOffset(
                               mobile
-                                  ? 0.9 - offset
+                                  ? 0.9 - offset * 2
                                   : animation
                                       ? 0.95 - offset
                                       : 0.95 - offset / 2,
@@ -469,8 +469,8 @@ class _HomeState extends State<Home> with SingleTickerProviderStateMixin {
                           alignment: FractionalOffset(
                               mobile
                                   ? animation
-                                      ? 0.1 + offset
-                                      : 0.1 + offset / 2
+                                      ? 0.1 + offset * 2
+                                      : 0.1 + offset
                                   : 0.1 + offset,
                               mobile ? 0.55 : 0.1),
                           child: Cloud(
